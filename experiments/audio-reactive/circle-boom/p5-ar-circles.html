@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+	#canvas {
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+		max-height: 100%;
+		border: 1px solid black;
+	}
+	.btn {
+		display: inline-block;
+		padding: 15px 10px;
+		background: #D098A5;
+		color: #000;
+	}
+
+	.btn:hover {
+		background-color: #DB9FA9;
+		cursor: pointer;
+	}
+
+	.btn:active {
+		background-color: #EBEDFA;
+	}
+
+	.loader {
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		/*width: 300px;
+		height: 20px;
+		border: 1px solid #000;*/
+	}
+
+	.loading-bar {
+		width: 0%;
+		height: 100%;
+		background-color: pink;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.hidden {
+		opacity: 0;
+		transition: all .5s ease-out;
+	}
+	</style>
+</head>
+<body>
+	<h1>audio reactive p5.js test</h1>
+
+	<a class="btn play">play / pause</a>
+	<a class="btn stoploop hidden">stop loop</a>
+	
+	<div class="loader">
+		<!-- <div class="loading-bar"></div> -->
+		<img src="loader.svg" alt="">
+	</div>
+
+	<script src="classlist.js"></script>
+	<script src="p5.min.js"></script>
+	<script src="p5.sound.js"></script>
+	<script src="p5-ar-circles.js"></script>
+
+</body>
+</html>
